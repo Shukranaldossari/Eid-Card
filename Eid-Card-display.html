@@ -16,10 +16,11 @@
     .custom-button {
       background-color: #ff8ba7;
       margin-bottom: 20px;
+      font-size: 20px;
     }
 
     #myCanvas {
-     /*display: none;*/
+     display: none;
     }
 
   </style>
@@ -36,8 +37,10 @@
         <div class="w3-panel w3-card custom-card">
           <p>عيد مبارك, <b><span id="name"></span></p></b>
           <p>
-            عيدك أجمل مع بطاقة تهنئة شخصية<br />
-            أصبحت جاهزة للتحميل!
+          بطاقتك الخاصة جاهزة للتحميل! <br>
+شاركها واجعل الفرح يملأ قلوب من تحب
+
+          
           </p>
 
           <canvas
@@ -101,7 +104,7 @@
               let textSize = 30;
               let textX = canvas.width / 2;
               let textY = canvas.height - 20;
-              let fontFamily = 'Segoe UI", Tahoma, Geneva, Verdana, sans-serif';
+              let fontFamily = "Tajawal, sans-serif";
 
               // Adjust text properties based on the selected image
               if (selectedImage === "Images/card1.png") {
@@ -109,17 +112,50 @@
                 textSize = 50;
                 textX = canvas.width / 2;
                 textY = canvas.height - 330;
-                fontFamily = "Tajawal";
+              //2
               } else if (selectedImage === "Images/card2.png") {
-                textColor = "#0000FF"; // Blue
-                textSize = 25;
+                textColor = "white"; 
+                textSize = 50;
                 textX = canvas.width / 2;
-                textY = canvas.height - 50;
+                textY = canvas.height - 320;
+              //3
               } else if (selectedImage === "Images/card3.png") {
-                textColor = "#008000"; // Green
-                textSize = 35;
+                textColor = "#FA6570"; 
+                textSize = 65;
                 textX = canvas.width / 2;
-                textY = canvas.height - 150;
+                textY = canvas.height - 190;
+              }
+              //4
+              else if (selectedImage === "Images/card4.png") {
+                textColor = "#524438"; 
+                textSize = 65;
+                textX = canvas.width / 2;
+                textY = canvas.height - 400;
+                
+              }
+              //5
+              else if (selectedImage === "Images/card5.png") {
+                textColor = "#465D5F"; 
+                textSize = 50;
+                textX = canvas.width / 2;
+                textY = canvas.height - 215;
+                
+              }
+              //6
+              else if (selectedImage === "Images/card6.png") {
+                textColor = "#7E6363"; 
+                textSize = 50;
+                textX = canvas.width / 2;
+                textY = canvas.height - 297;
+                
+              }
+              //7
+              else if (selectedImage === "Images/card7.png") {
+                textColor = "#81814D"; 
+                textSize = 55;
+                textX = canvas.width / 3;
+                textY = canvas.height - 350;
+                
               }
 
               // Set text properties
