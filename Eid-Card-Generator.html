@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eid Card Generator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="eidStyle.css" />
+  </head>
+
+  <style>
+    .custom-card {
+      background-color: #fffffe;
+    }
+
+    .custom-button {
+      background-color: #ff8ba7;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <body>
+    <center>
+      <img
+        style="margin-top: 50px; margin-bottom: 20px; width: 250px"
+        src="SD-LOGO.png"
+        alt=""
+      />
+      <div class="w3-container">
+        <div class="w3-panel w3-card custom-card">
+          <div style="margin: 80px auto 50px; padding-top: 10px; width: 400px; border-inline: solid 6px #ffc6c7">
+            <p>
+              لحظاتنا في العيد أجمل منظرا<br />
+              ‏وتآلف الأحباب ألطف ما نرى<br /><br />
+
+              ‏العيد فرصتنا لنرويَ ودنا<br />
+              ‏بشرى لمن في العيد زار وبادرَ<br><br>
+            </p>
+          </div>
+          <p>
+            اصنع بطاقة تهنئة خاصة بك في ثوانٍ معدودة! <br />
+            احتفل بالعيد بأسلوب فريد وشارك الفرح مع من تحب
+          </p>
+          <form id="card-form">
+            <input
+              id="name"
+              class="name-input w3-input w3-border w3-round-large placeholder-right"
+              type="text"
+              placeholder="أدخل اسمك"
+            />
+            <br />
+            <br />
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card1.png" />
+              <img class="w3-round-large card-img" src="Images/card1.png" />
+            </label>
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card2.png" />
+              <img class="w3-round-large card-img" src="Images/card2.png" />
+            </label>
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card3.png" />
+              <img class="w3-round-large card-img" src="Images/card3.png" />
+            </label>
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card4.png" />
+              <img class="w3-round-large card-img" src="Images/card4.png" />
+            </label>
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card5.png" />
+              <img class="w3-round-large card-img" src="Images/card5.png" />
+            </label>
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card6.png" />
+              <img class="w3-round-large card-img" src="Images/card6.png" />
+            </label>
+
+            <label class="card-option">
+              <input type="radio" name="card" value="Images/card7.png" />
+              <img class="w3-round-large card-img" src="Images/card7.png" />
+            </label>
+
+            <br /><br />
+            <button
+              class="w3-button w3-round-xlarge custom-button"
+              onclick="redirectToEidCardDisplay()"
+              type="button"
+            >
+              التالي
+            </button>
+          </form>
+        </div>
+      </div>
+    </center>
+
+    <script>
+      function redirectToEidCardDisplay() {
+        const name = document.getElementById("name").value;
+        const selectedImage = document.querySelector(
+          'input[name="card"]:checked'
+        );
+
+        if (name && selectedImage) {
+          const urlParams = new URLSearchParams();
+          urlParams.append("name", name);
+          urlParams.append("selectedImage", selectedImage.value);
+
+          const url = "Eid-Card-display.html?" + urlParams.toString();
+          window.location.href = url;
+        } else {
+          alert("Please enter your name and select an image.");
+        }
+      }
+    </script>
+  </body>
+</html>
